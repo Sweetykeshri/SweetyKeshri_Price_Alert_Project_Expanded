@@ -1,0 +1,4 @@
+Django>=4.2
+# For real scraping you might want requests, beautifulsoup4, etc.
+# requests
+# beautifulsoup4

@@ -1,0 +1,108 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Noise-Cancelling Headphones X",
+      "url": "https://example.com/product/1",
+      "desired_price": "7999.00",
+      "current_price": "9999.00",
+      "owner": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Smartphone Pro Max",
+      "url": "https://example.com/product/2",
+      "desired_price": "24999.00",
+      "current_price": "29999.00",
+      "owner": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Wireless Charger - Fast",
+      "url": "https://example.com/product/3",
+      "desired_price": "999.00",
+      "current_price": "1499.00",
+      "owner": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Fitness Band Classic",
+      "url": "https://example.com/product/4",
+      "desired_price": "2499.00",
+      "current_price": "2999.00",
+      "owner": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Bluetooth Speaker Mini",
+      "url": "https://example.com/product/5",
+      "desired_price": "1499.00",
+      "current_price": "1999.00",
+      "owner": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "USB-C Hub Pro",
+      "url": "https://example.com/product/6",
+      "desired_price": "2999.00",
+      "current_price": "3499.00",
+      "owner": null
+    }
+  },
+  {
+    "model": "products.pricealert",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "email": "buyer1@example.com",
+      "triggered": false,
+      "triggered_at": null
+    }
+  },
+  {
+    "model": "products.pricealert",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "email": "buyer2@example.com",
+      "triggered": false,
+      "triggered_at": null
+    }
+  },
+  {
+    "model": "products.pricealert",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "email": "charger_fan@example.com",
+      "triggered": false,
+      "triggered_at": null
+    }
+  },
+  {
+    "model": "products.pricealert",
+    "pk": 4,
+    "fields": {
+      "product": 4,
+      "email": "fitness_lover@example.com",
+      "triggered": false,
+      "triggered_at": null
+    }
+  }
+]

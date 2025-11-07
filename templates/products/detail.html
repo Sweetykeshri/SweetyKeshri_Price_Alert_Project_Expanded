@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head><title>{{ product.name }} - Price Alert</title></head>
+<body>
+  <h1>{{ product.name }}</h1>
+  <p>Current price: ₹{{ product.current_price }}</p>
+  <p>Desired price: ₹{{ product.desired_price }}</p>
+  <p>Last checked: {{ product.last_checked }}</p>
+  <p><a href="{% url 'products:manual_check' product.pk %}">Run manual price check</a></p>
+
+  <h2>Price history</h2>
+  <table border="1" cellpadding="6">
+    <tr><th>Price (₹)</th><th>Checked at</th></tr>
+    {% for h in product.history.all %}
+      <tr><td>{{ h.price }}</td><td>{{ h.checked_at }}</td></tr>
+    {% empty %}
+      <tr><td colspan="2">No history yet</td></tr>
+    {% endfor %}
+  </table>
+
+  <h2>Alerts</h2>
+  <ul>
+  {% for a in product.alerts.all %}
+    <li>{{ a.email }} - Triggered: {{ a.triggered }} {% if a.triggered %} at {{ a.triggered_at }}{% endif %}</li>
+  {% empty %}
+    <li>No alerts</li>
+  {% endfor %}
+  </ul>
+
+  <p><a href="{% url 'products:list' %}">Back to list</a></p>
+</body>
+</html>

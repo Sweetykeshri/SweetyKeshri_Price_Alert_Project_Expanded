@@ -1,0 +1,22 @@
+{% load static %}
+<!doctype html>
+<html>
+<head><title>Products - Price Alert</title></head>
+<body>
+  <h1>Products</h1>
+  <table border="1" cellpadding="6">
+    <tr><th>Name</th><th>Current Price (₹)</th><th>Desired Price (₹)</th><th>Actions</th></tr>
+    {% for p in products %}
+      <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.current_price }}</td>
+        <td>{{ p.desired_price }}</td>
+        <td><a href="{% url 'products:detail' p.pk %}">View</a> | <a href="{% url 'products:manual_check' p.pk %}">Manual Check</a></td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="4">No products</td></tr>
+    {% endfor %}
+  </table>
+  <p><a href="/admin/">Go to admin</a></p>
+</body>
+</html>
