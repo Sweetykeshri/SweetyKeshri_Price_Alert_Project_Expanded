@@ -35,10 +35,10 @@ Quick start (Linux/macOS/WSL):
 
 API examples:
 - List products:
-  curl http://127.0.0.1:8000/api/products/
+  Live Link  : http://127.0.0.1:8000/products/
 
 - Import CSV via curl:
-  curl -F "file=@fixtures/products_import.csv" http://127.0.0.1:8000/api/import-csv/
+  curl -F "file=@fixtures/products_import.csv" http://127.0.0.1:8000/import-csv/
 
 Notes:
 - Replace simulated price fetching with real scraping/API in products.tasks.fetch_price_simulator.
